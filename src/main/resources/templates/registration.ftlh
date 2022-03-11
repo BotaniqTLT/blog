@@ -1,9 +1,8 @@
-<#import "parts/common.ftlh" as c>
-<#import "parts/login.ftlh" as l>
+<#import "parts/common.ftl" as c>
+<#import "parts/login.ftl" as l>
 
 <@c.page>
-ADD new User
-${message}
-
- <@l.login "/registration"/>
+Add new user
+${message?ifExists}
+<@l.login "/registration" />
 </@c.page>
